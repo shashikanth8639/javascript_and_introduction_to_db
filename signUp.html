@@ -1,0 +1,94 @@
+<html> 
+    <head> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <script src="./validate.js"></script>
+        <style> 
+            i { 
+                 position:absolute;
+                 right: 5px;
+            } 
+              
+            .input-icons { 
+                 position: relative; 
+                 width: 100%; 
+                 margin-bottom: 10px;
+                 padding:0 0 20px;
+                 /* direction: rtl;  */
+            } 
+              
+            .icon { 
+                padding: 10px;  
+                min-width: 50px; 
+                text-align: center; 
+            } 
+              
+            .input-field { 
+                width: 100%; 
+                padding: 10px; 
+                text-align: left;
+            } 
+              
+            h1{ 
+                color: white;
+                background-color:skyblue;
+                padding: 15px; 
+                border-radius: 5px;
+            }
+     
+            button {
+                border-radius:7px;
+                background-color: skyblue;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+        </style> 
+    </head> 
+      
+    <body> 
+        <form style="max-width:450px;margin: 10vh auto">
+            <h1 style="text-align: center;">Sign up</h1> 
+    
+            <div class="input-icons"> 
+                <i class="fa fa-envelope icon"></i> 
+                <input class="input-field" type="text" name="email" onblur="validateEmail()" onfocus="emailClear()" placeholder="mail@example.com"> 
+                <p id="wrong_email" style="display: none;"></p>
+            </div> 
+    
+            <div class="input-icons"> 
+                <i class="fa fa-lock icon"></i> 
+                <input class="input-field" type="password" name="password" onblur="validatePass()" onfocus="passClear()" placeholder="password"> 
+                <p id="wrong_pass" style="display: none;"></p>
+            </div> 
+
+            <div class="input-icons"> 
+                <i class="fa fa-check icon"></i> 
+                <input class="input-field" type="password" name="confirm_password" onblur="validateConfirmPass()" onfocus="confirmClear()" placeholder="confirm-password"> 
+                <p id="wrong_confirm" style="display: none;"></p>
+            </div> 
+
+            <div class="input-icons"> 
+                <i class="fa fa-mobile icon"></i> 
+                <input class="input-field" type="text" name="mobile" onblur="validateMobile()" onfocus="mobileClear()" placeholder="mobile_number"> 
+                <p id="wrong_mobile" style="display: none;"></p>
+            </div> 
+
+            <div>
+                <button type="button" onclick="onSubmit()">SIGN UP</button>
+                <p id="wrong_msg" style="display: none;"></p>
+            </div>
+
+            <div>
+                <p>-------------------------------------- OR --------------------------------------</p>
+            </div>
+            
+            <div>
+                <button type="button" style="background-color:lightgreen" >EPAM LOGIN</a></button>
+            </div>                  
+        </form>
+    </body> 
+</html>  
+    
